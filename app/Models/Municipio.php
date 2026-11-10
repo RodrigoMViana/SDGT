@@ -12,6 +12,8 @@ class Municipio extends Model
 
     protected $fillable = ['codigo_ibge', 'nome', 'regiao_imediata', 'microrregiao', 'relatoria_id'];
 
+    protected $casts = ['relatoria_id' => 'integer'];
+
     public function relatoria(): BelongsTo
     {
         return $this->belongsTo(Relatoria::class);

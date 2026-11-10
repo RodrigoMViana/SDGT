@@ -13,6 +13,8 @@ class Evidencia extends Model
         'preenchimento_id', 'pergunta_id', 'nome_original', 'caminho', 'mime', 'tamanho', 'hash_sha256', 'enviado_por',
     ];
 
+    protected $casts = ['preenchimento_id' => 'integer', 'pergunta_id' => 'integer', 'tamanho' => 'integer', 'enviado_por' => 'integer'];
+
     public function preenchimento(): BelongsTo
     {
         return $this->belongsTo(Preenchimento::class);

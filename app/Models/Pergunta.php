@@ -29,6 +29,8 @@ class Pergunta extends Model
         'exige_evidencia' => 'boolean',
         'ativo' => 'boolean',
         'peso' => 'float',
+        'tema_id' => 'integer',
+        'pergunta_pai_id' => 'integer',
     ];
 
     public function tema(): BelongsTo

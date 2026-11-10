@@ -112,6 +112,8 @@ return [
             'prefix_indexes' => true,
             'encrypt' => env('DB_ENCRYPT', 'yes'),
             'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
+            // Retorna colunas numéricas como int/float (o padrão do pdo_sqlsrv é string)
+            'options' => defined('PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE') ? [PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE => true] : [],
         ],
 
     ],

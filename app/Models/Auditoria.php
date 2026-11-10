@@ -23,7 +23,7 @@ class Auditoria extends Model
         'dados_anteriores', 'dados_novos', 'ip', 'user_agent',
     ];
 
-    protected $casts = ['dados_anteriores' => 'array', 'dados_novos' => 'array', 'created_at' => 'datetime'];
+    protected $casts = ['dados_anteriores' => 'array', 'dados_novos' => 'array', 'created_at' => 'datetime', 'entidade_id' => 'integer', 'user_id' => 'integer'];
 
     public function user(): BelongsTo
     {

@@ -11,7 +11,7 @@ class OpcaoResposta extends Model
 
     protected $fillable = ['pergunta_id', 'texto', 'pontuacao', 'ordem', 'solicita_evidencia'];
 
-    protected $casts = ['pontuacao' => 'float', 'ordem' => 'integer', 'solicita_evidencia' => 'boolean'];
+    protected $casts = ['pontuacao' => 'float', 'ordem' => 'integer', 'solicita_evidencia' => 'boolean', 'pergunta_id' => 'integer'];
 
     public function pergunta(): BelongsTo
     {

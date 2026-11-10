@@ -31,6 +31,8 @@ class Questionario extends Model
         'data_fim' => 'date',
         'data_limite_assinatura' => 'date',
         'publicado_em' => 'datetime',
+        'origem_id' => 'integer',
+        'publicado_por' => 'integer',
     ];
 
     public function perguntas(): BelongsToMany

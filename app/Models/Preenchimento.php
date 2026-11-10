@@ -32,6 +32,10 @@ class Preenchimento extends Model
         'pontuacao_maxima' => 'float',
         'indice_aderencia' => 'float',
         'indices_por_tema' => 'array',
+        'questionario_id' => 'integer',
+        'municipio_id' => 'integer',
+        'responsavel_id' => 'integer',
+        'gestor_id' => 'integer',
     ];
 
     public function questionario(): BelongsTo

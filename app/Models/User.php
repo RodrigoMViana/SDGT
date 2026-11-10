@@ -29,6 +29,7 @@ class User extends Authenticatable
             'ultimo_acesso_em' => 'datetime',
             'password' => 'hashed',
             'ativo' => 'boolean',
+            'municipio_id' => 'integer',
             'perfil' => Perfil::class,
         ];
     }

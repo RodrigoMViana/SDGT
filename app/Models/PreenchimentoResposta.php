@@ -11,7 +11,7 @@ class PreenchimentoResposta extends Model
 
     protected $fillable = ['preenchimento_id', 'pergunta_id', 'opcoes_ids', 'valor_texto', 'pontuacao'];
 
-    protected $casts = ['opcoes_ids' => 'array', 'pontuacao' => 'float'];
+    protected $casts = ['opcoes_ids' => 'array', 'pontuacao' => 'float', 'preenchimento_id' => 'integer', 'pergunta_id' => 'integer'];
 
     public function preenchimento(): BelongsTo
     {

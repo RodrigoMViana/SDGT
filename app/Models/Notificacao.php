@@ -22,7 +22,7 @@ class Notificacao extends Model
 
     protected $fillable = ['user_id', 'tipo', 'titulo', 'mensagem', 'link', 'questionario_id', 'lida_em', 'email_enviado_em'];
 
-    protected $casts = ['lida_em' => 'datetime', 'email_enviado_em' => 'datetime'];
+    protected $casts = ['lida_em' => 'datetime', 'email_enviado_em' => 'datetime', 'user_id' => 'integer', 'questionario_id' => 'integer'];
 
     public function user(): BelongsTo
     {
