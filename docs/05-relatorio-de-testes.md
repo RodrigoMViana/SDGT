@@ -7,12 +7,12 @@
 | Ambiente | Testes | Asserções | Resultado | Duração |
 |---|---|---|---|---|
 | Local — SQLite (Windows 11, PHP 8.3) | **76** | **480** | ✅ 76 aprovados, 0 falhas | 1 min 37 s |
-| CI — SQLite (Ubuntu 24.04) | 76 | 480 | ver aba *Actions* (`CI › Testes (PHP 8.3 + SQLite)`) | — |
-| CI — **SQL Server 2022** (migrações + seed completo + suíte) | 76 | 480 | ver aba *Actions* (`CI › Testes (PHP 8.3 + SQL Server 2022)`) | — |
-| CI — Build da imagem Docker | — | — | ver aba *Actions* (`CI › Build da imagem Docker`) | — |
-| Protótipo estático (navegador, roteiro automatizado via DOM) | 28 telas + fluxo E2E | — | ✅ sem erros de script | — |
+| CI — SQLite (Ubuntu 24.04) | 76 | 480 | ✅ 76 aprovados | 20 s |
+| CI — **SQL Server 2022** (migrações + seed completo + suíte) | **76** | **480** | ✅ 76 aprovados; migrações OK; `DemoSeeder` OK (16 s) | 64 s |
+| CI — Build da imagem Docker (`php:8.3-apache` + ODBC 18 + `pdo_sqlsrv`) | — | — | ✅ imagem construída; extensões `sqlsrv`, `pdo_sqlsrv`, `gd`, `intl`, `zip` verificadas | 2 min |
+| Protótipo estático publicado (navegador, roteiro automatizado via DOM) | 28 telas + fluxo E2E | — | ✅ sem erros de script; site no ar | — |
 
-> O resultado dos jobs de CI fica registrado em cada execução em `https://github.com/RodrigoMViana/SDGT/actions` (artefatos `junit-sqlite` e `junit-sqlserver`). A seção 6 traz o status da primeira execução.
+> Execução de referência: `CI` #42885136410 em `https://github.com/RodrigoMViana/SDGT/actions` (artefatos `junit-sqlite` e `junit-sqlserver`). Cada push gera nova execução.
 
 ## 2. Estratégia
 
@@ -94,10 +94,12 @@ Roteiro executado no navegador (Chromium) com a base exportada:
 | 2 | Seed de demonstração lento (3 min) | Execução em transação única (≈ 25 s) |
 | 3 | Geração de certificado em teste dependia do `openssl.cnf` do SO | Certificado e-CPF de teste versionado em `tests/fixtures` |
 | 4 | Asserção de progresso considerava HTML | `assertSeeText` |
+| 5 | **Somente no SQL Server:** o `pdo_sqlsrv` devolve inteiros como *string*, fazendo comparações estritas de IDs falharem (403 indevido no isolamento entre municípios, filtro por relatoria vazio) — 16 testes falharam na 1ª execução do CI | `PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE` em `config/database.php` + *casts* inteiros nas chaves estrangeiras; 76/76 no SQL Server |
+| 6 | Instalação do driver ODBC no runner do CI (`gpg` sem TTY) | `gpg --batch --yes` |
 
 ## 7. Limitações e itens não cobertos
 
 - **Integrações reais** (GOV.BR, ICP-Brasil, CADUN, Calendário, SFG, Arquivos, SMTP) — testadas apenas contra contratos presumidos/simulados; exigem homologação com o TCE (ver [02](02-integracoes-pendentes.md)).
-- **Docker Compose completo** não foi executado na máquina de desenvolvimento (sem Docker instalado); a imagem é construída e verificada no CI, e as migrações/seed/testes em SQL Server 2022 também rodam no CI.
+- **Docker Compose completo** (app + worker + scheduler + SQL Server + Mailpit subindo juntos) não foi executado na máquina de desenvolvimento (sem Docker instalado). Estão validados no CI, separadamente: o build da imagem e as migrações/seed/testes em SQL Server 2022. A subida integrada deve ser conferida no passo 6.3 do [fluxo de validação](07-fluxo-de-validacao.md).
 - Testes de **acessibilidade (e-MAG/WCAG)**, **carga** e **compatibilidade de navegadores** não foram realizados — recomendados na homologação.
 - **Validação visual** (capturas de tela) não automatizada.

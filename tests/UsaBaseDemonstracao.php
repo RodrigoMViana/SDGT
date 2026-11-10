@@ -25,7 +25,9 @@ trait UsaBaseDemonstracao
         if (($_ENV['DB_CONNECTION'] ?? getenv('DB_CONNECTION')) === 'sqlite') {
             $arquivo = dirname(__DIR__).'/database/testing-demo.sqlite';
             if (! self::$baseDemoPronta) {
-                @unlink($arquivo);
+                if (is_file($arquivo)) {
+                    unlink($arquivo);
+                }
                 touch($arquivo);
             }
             foreach (['DB_DATABASE' => $arquivo] as $k => $v) {
