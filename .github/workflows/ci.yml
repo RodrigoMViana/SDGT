@@ -57,11 +57,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Driver ODBC 18 da Microsoft
         run: |
-          if ! odbcinst -q -d | grep -q "ODBC Driver 18"; then
-            curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
-            curl -fsSL https://packages.microsoft.com/config/ubuntu/24.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
-            sudo apt-get update && sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
-          fi
+          curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --batch --yes --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+          curl -fsSL https://packages.microsoft.com/config/ubuntu/24.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+          sudo apt-get update
+          sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev
+          odbcinst -q -d
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
