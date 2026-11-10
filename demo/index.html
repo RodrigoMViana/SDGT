@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SDGT — Demonstração</title>
+  <meta name="description" content="Protótipo navegável do Sistema de Diagnóstico da Gestão Tributária Municipal (TCE/TO).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/sdgt.css">
+  <style>
+    .carregando { min-height: 100vh; display: grid; place-items: center; color: var(--azul-escuro); font-weight: 600; }
+    .lateral a[href="#/sobre"] { color: var(--laranja); }
+  </style>
+</head>
+<body>
+  <div id="app"><div class="carregando">Carregando demonstração…</div></div>
+  <noscript>Esta demonstração requer JavaScript habilitado.</noscript>
+  <script src="vendor/chart.umd.min.js"></script>
+  <script>
+    if (window.Chart) { Chart.defaults.font.family = "'Montserrat', system-ui, sans-serif"; Chart.defaults.font.size = 12; Chart.defaults.color = '#2b2f33'; }
+  </script>
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/tribunal.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/municipio.js"></script>
+  <script>UI.iniciar();</script>
+</body>
+</html>

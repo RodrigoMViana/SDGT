@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  testes-sqlite:
+    name: Testes (PHP 8.3 + SQLite)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, gd, zip, pdo_sqlite, sqlite3, bcmath
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - run: cp .env.example .env && php artisan key:generate
+      - name: Testes automatizados
+        run: php artisan test --log-junit storage/logs/junit-sqlite.xml
+      - name: Estilo de código (Laravel Pint)
+        run: vendor/bin/pint --test
+        continue-on-error: true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: junit-sqlite
+          path: storage/logs/junit-sqlite.xml
+
+  testes-sqlserver:
+    name: Testes (PHP 8.3 + SQL Server 2022)
+    runs-on: ubuntu-24.04
+    services:
+      sqlserver:
+        image: mcr.microsoft.com/mssql/server:2022-latest
+        env:
+          ACCEPT_EULA: Y
+          MSSQL_SA_PASSWORD: Sdgt#Sql2026
+        ports: ['1433:1433']
+        options: >-
+          --health-cmd "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P 'Sdgt#Sql2026' -C -Q 'SELECT 1'"
+          --health-interval 10s --health-timeout 5s --health-retries 20
+    env:
+      DB_CONNECTION: sqlsrv
+      DB_HOST: 127.0.0.1
+      DB_PORT: 1433
+      DB_USERNAME: sa
+      DB_PASSWORD: Sdgt#Sql2026
+      DB_TRUST_SERVER_CERTIFICATE: 'true'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Driver ODBC 18 da Microsoft
+        run: |
+          if ! odbcinst -q -d | grep -q "ODBC Driver 18"; then
+            curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+            curl -fsSL https://packages.microsoft.com/config/ubuntu/24.04/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+            sudo apt-get update && sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18
+          fi
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, gd, zip, bcmath, sqlsrv, pdo_sqlsrv, pdo_sqlite
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - run: cp .env.example .env && php artisan key:generate
+      - name: Criar bancos
+        run: |
+          php -r '$p=new PDO("sqlsrv:Server=127.0.0.1,1433;TrustServerCertificate=1","sa","Sdgt#Sql2026");
+            foreach(["sdgt","sdgt_test"] as $d){$p->exec("IF DB_ID(N'"'"'$d'"'"') IS NULL CREATE DATABASE [$d]");} echo "ok\n";'
+      - name: Migrações + seed completo (base + demonstração) no SQL Server
+        env:
+          DB_DATABASE: sdgt
+          SDGT_SEED_DEMO: 'true'
+        run: php artisan migrate:fresh --seed --force
+      - name: Testes automatizados no SQL Server
+        env:
+          DB_DATABASE: sdgt_test
+        run: php artisan test --log-junit storage/logs/junit-sqlserver.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: junit-sqlserver
+          path: storage/logs/junit-sqlserver.xml
+
+  imagem-docker:
+    name: Build da imagem Docker
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t sdgt-app:ci .
+      - name: Verificar extensões na imagem
+        run: docker run --rm --entrypoint php sdgt-app:ci -m | grep -E "pdo_sqlsrv|sqlsrv|gd|intl|zip"

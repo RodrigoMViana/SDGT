@@ -1,0 +1,72 @@
+# =====================================================================
+# SDGT — ambiente completo em contêineres
+#   cp .env.docker.example .env.docker   (ajuste senhas e APP_KEY)
+#   docker compose up -d --build
+#   Aplicação: http://localhost:8080   ·   E-mails (Mailpit): http://localhost:8025
+# =====================================================================
+name: sdgt
+
+x-app: &app
+  build: .
+  image: sdgt-app:latest
+  env_file: .env.docker
+  depends_on:
+    sqlserver:
+      condition: service_healthy
+  volumes:
+    - sdgt-storage:/var/www/html/storage/app
+  restart: unless-stopped
+
+services:
+  app:
+    <<: *app
+    environment:
+      CONTAINER_ROLE: app
+    ports:
+      - "${SDGT_PORTA:-8080}:80"
+
+  worker:
+    <<: *app
+    environment:
+      CONTAINER_ROLE: worker
+    depends_on:
+      app:
+        condition: service_healthy
+
+  scheduler:
+    <<: *app
+    environment:
+      CONTAINER_ROLE: scheduler
+    depends_on:
+      app:
+        condition: service_healthy
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    platform: linux/amd64
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "${MSSQL_PID:-Developer}"
+      MSSQL_SA_PASSWORD: "${DB_PASSWORD:-Sdgt#Sql2026}"
+    ports:
+      - "${SQLSERVER_PORTA:-14330}:1433"
+    volumes:
+      - sdgt-mssql:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"$${MSSQL_SA_PASSWORD}\" -C -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  # Servidor SMTP de testes (captura os e-mails de notificação) — remover em produção
+  mailpit:
+    image: axllent/mailpit:v1.21
+    ports:
+      - "${MAILPIT_PORTA:-8025}:8025"
+    restart: unless-stopped
+
+volumes:
+  sdgt-storage:
+  sdgt-mssql:

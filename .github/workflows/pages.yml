@@ -1,0 +1,57 @@
+name: Publicar demonstração e documentação (GitHub Pages)
+
+# Gera o protótipo navegável (demo/) com a base de demonstração exportada pela
+# própria aplicação Laravel e a documentação (docs/*.md → HTML).
+# Requisito: Settings → Pages → Source = "GitHub Actions".
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, gd, zip, pdo_sqlite, sqlite3
+          coverage: none
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - name: Gerar base de demonstração e exportar JSON
+        run: |
+          cp .env.example .env && php artisan key:generate
+          touch database/database.sqlite
+          SDGT_SEED_DEMO=true php artisan migrate:fresh --seed --force
+          php artisan sdgt:exportar-demo demo/data/seed.json
+      - name: Montar site
+        run: |
+          npm install --no-save marked@12.0.2
+          node scripts/montar-pages.mjs _site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

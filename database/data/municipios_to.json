@@ -1,0 +1,836 @@
+[
+ {
+  "codigo_ibge": "1700251",
+  "nome": "Abreulândia",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1700301",
+  "nome": "Aguiarnópolis",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1700350",
+  "nome": "Aliança do Tocantins",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1700400",
+  "nome": "Almas",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1700707",
+  "nome": "Alvorada",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1701002",
+  "nome": "Ananás",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1701051",
+  "nome": "Angico",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1701101",
+  "nome": "Aparecida do Rio Negro",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1701309",
+  "nome": "Aragominas",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1701903",
+  "nome": "Araguacema",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1702000",
+  "nome": "Araguaçu",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1702109",
+  "nome": "Araguaína",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1702158",
+  "nome": "Araguanã",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1702208",
+  "nome": "Araguatins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1702307",
+  "nome": "Arapoema",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1702406",
+  "nome": "Arraias",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1702554",
+  "nome": "Augustinópolis",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1702703",
+  "nome": "Aurora do Tocantins",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1702901",
+  "nome": "Axixá do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1703008",
+  "nome": "Babaçulândia",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1703057",
+  "nome": "Bandeirantes do Tocantins",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1703073",
+  "nome": "Barra do Ouro",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1703107",
+  "nome": "Barrolândia",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1703206",
+  "nome": "Bernardo Sayão",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1703305",
+  "nome": "Bom Jesus do Tocantins",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1703602",
+  "nome": "Brasilândia do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1703701",
+  "nome": "Brejinho de Nazaré",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1703800",
+  "nome": "Buriti do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1703826",
+  "nome": "Cachoeirinha",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1703842",
+  "nome": "Campos Lindos",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1703867",
+  "nome": "Cariri do Tocantins",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1703883",
+  "nome": "Carmolândia",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1703891",
+  "nome": "Carrasco Bonito",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1703909",
+  "nome": "Caseara",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1704105",
+  "nome": "Centenário",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1705102",
+  "nome": "Chapada da Natividade",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1704600",
+  "nome": "Chapada de Areia",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1705508",
+  "nome": "Colinas do Tocantins",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1716703",
+  "nome": "Colméia",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1705557",
+  "nome": "Combinado",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1705607",
+  "nome": "Conceição do Tocantins",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1706001",
+  "nome": "Couto Magalhães",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1706100",
+  "nome": "Cristalândia",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1706258",
+  "nome": "Crixás do Tocantins",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1706506",
+  "nome": "Darcinópolis",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1707009",
+  "nome": "Dianópolis",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1707108",
+  "nome": "Divinópolis do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1707207",
+  "nome": "Dois Irmãos do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Miracema do Tocantins"
+ },
+ {
+  "codigo_ibge": "1707306",
+  "nome": "Dueré",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1707405",
+  "nome": "Esperantina",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1707553",
+  "nome": "Fátima",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1707652",
+  "nome": "Figueirópolis",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1707702",
+  "nome": "Filadélfia",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1708205",
+  "nome": "Formoso do Araguaia",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1708304",
+  "nome": "Goianorte",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1709005",
+  "nome": "Goiatins",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1709302",
+  "nome": "Guaraí",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1709500",
+  "nome": "Gurupi",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1709807",
+  "nome": "Ipueiras",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1710508",
+  "nome": "Itacajá",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1710706",
+  "nome": "Itaguatins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1710904",
+  "nome": "Itapiratins",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1711100",
+  "nome": "Itaporã do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1711506",
+  "nome": "Jaú do Tocantins",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1711803",
+  "nome": "Juarina",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1711902",
+  "nome": "Lagoa da Confusão",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1711951",
+  "nome": "Lagoa do Tocantins",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1712009",
+  "nome": "Lajeado",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1712157",
+  "nome": "Lavandeira",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1712405",
+  "nome": "Lizarda",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1712454",
+  "nome": "Luzinópolis",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1712504",
+  "nome": "Marianópolis do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1712702",
+  "nome": "Mateiros",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1712801",
+  "nome": "Maurilândia do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1713205",
+  "nome": "Miracema do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Miracema do Tocantins"
+ },
+ {
+  "codigo_ibge": "1713304",
+  "nome": "Miranorte",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Miracema do Tocantins"
+ },
+ {
+  "codigo_ibge": "1713601",
+  "nome": "Monte do Carmo",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1713700",
+  "nome": "Monte Santo do Tocantins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1713957",
+  "nome": "Muricilândia",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1714203",
+  "nome": "Natividade",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1714302",
+  "nome": "Nazaré",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1714880",
+  "nome": "Nova Olinda",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1715002",
+  "nome": "Nova Rosalândia",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1715101",
+  "nome": "Novo Acordo",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1715150",
+  "nome": "Novo Alegre",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1715259",
+  "nome": "Novo Jardim",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1715507",
+  "nome": "Oliveira de Fátima",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1721000",
+  "nome": "Palmas",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1715705",
+  "nome": "Palmeirante",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1713809",
+  "nome": "Palmeiras do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1715754",
+  "nome": "Palmeirópolis",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1716109",
+  "nome": "Paraíso do Tocantins",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1716208",
+  "nome": "Paranã",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1716307",
+  "nome": "Pau D'Arco",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1716505",
+  "nome": "Pedro Afonso",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1716604",
+  "nome": "Peixe",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1716653",
+  "nome": "Pequizeiro",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1717008",
+  "nome": "Pindorama do Tocantins",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1717206",
+  "nome": "Piraquê",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1717503",
+  "nome": "Pium",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1717800",
+  "nome": "Ponte Alta do Bom Jesus",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1717909",
+  "nome": "Ponte Alta do Tocantins",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1718006",
+  "nome": "Porto Alegre do Tocantins",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1718204",
+  "nome": "Porto Nacional",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1718303",
+  "nome": "Praia Norte",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1718402",
+  "nome": "Presidente Kennedy",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1718451",
+  "nome": "Pugmil",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Paraíso do Tocantins"
+ },
+ {
+  "codigo_ibge": "1718501",
+  "nome": "Recursolândia",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1718550",
+  "nome": "Riachinho",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1718659",
+  "nome": "Rio da Conceição",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1718709",
+  "nome": "Rio dos Bois",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Miracema do Tocantins"
+ },
+ {
+  "codigo_ibge": "1718758",
+  "nome": "Rio Sono",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1718808",
+  "nome": "Sampaio",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1718840",
+  "nome": "Sandolândia",
+  "microrregiao": "Rio Formoso",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1718865",
+  "nome": "Santa Fé do Araguaia",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1718881",
+  "nome": "Santa Maria do Tocantins",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1718899",
+  "nome": "Santa Rita do Tocantins",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1718907",
+  "nome": "Santa Rosa do Tocantins",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1719004",
+  "nome": "Santa Tereza do Tocantins",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1720002",
+  "nome": "Santa Terezinha do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1720101",
+  "nome": "São Bento do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1720150",
+  "nome": "São Félix do Tocantins",
+  "microrregiao": "Jalapão",
+  "regiao_imediata": "Palmas"
+ },
+ {
+  "codigo_ibge": "1720200",
+  "nome": "São Miguel do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1720259",
+  "nome": "São Salvador do Tocantins",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1720309",
+  "nome": "São Sebastião do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1720499",
+  "nome": "São Valério",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1720655",
+  "nome": "Silvanópolis",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Porto Nacional"
+ },
+ {
+  "codigo_ibge": "1720804",
+  "nome": "Sítio Novo do Tocantins",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Araguatins"
+ },
+ {
+  "codigo_ibge": "1720853",
+  "nome": "Sucupira",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1708254",
+  "nome": "Tabocão",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1720903",
+  "nome": "Taguatinga",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1720937",
+  "nome": "Taipas do Tocantins",
+  "microrregiao": "Dianópolis",
+  "regiao_imediata": "Dianópolis"
+ },
+ {
+  "codigo_ibge": "1720978",
+  "nome": "Talismã",
+  "microrregiao": "Gurupi",
+  "regiao_imediata": "Gurupi"
+ },
+ {
+  "codigo_ibge": "1721109",
+  "nome": "Tocantínia",
+  "microrregiao": "Porto Nacional",
+  "regiao_imediata": "Miracema do Tocantins"
+ },
+ {
+  "codigo_ibge": "1721208",
+  "nome": "Tocantinópolis",
+  "microrregiao": "Bico do Papagaio",
+  "regiao_imediata": "Tocantinópolis"
+ },
+ {
+  "codigo_ibge": "1721257",
+  "nome": "Tupirama",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Guaraí"
+ },
+ {
+  "codigo_ibge": "1721307",
+  "nome": "Tupiratins",
+  "microrregiao": "Miracema do Tocantins",
+  "regiao_imediata": "Colinas do Tocantins"
+ },
+ {
+  "codigo_ibge": "1722081",
+  "nome": "Wanderlândia",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ },
+ {
+  "codigo_ibge": "1722107",
+  "nome": "Xambioá",
+  "microrregiao": "Araguaína",
+  "regiao_imediata": "Araguaína"
+ }
+]
